@@ -15,6 +15,7 @@
 .container {
     max-width: 1352px;
     margin: 0 auto;
+    height: 100%;
 }
 
 /* HEADER */
@@ -623,4 +624,39 @@ p.limited {
     border: none;
     margin-top: 20px;
     align-self: flex-end;
+}
+
+/* FOOTER */
+
+.footer {
+    height: 89px;
+    box-shadow: 0px -5px 40px #00000029;
+    background-color: var(--light-grey);
+}
+
+.footerbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.footerbox__logo__logo {
+    font-family: var(--font1);
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 300;
+    color: var(--primary);
+    margin-bottom: 7px;
+}
+
+.footerbox__logo__copy {
+    font-family: var(--font2);
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--grey);
+}
+
+.twitter {
+    margin-right: 20px;
 }
