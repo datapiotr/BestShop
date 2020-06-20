@@ -1,0 +1,35 @@
+.opening {
+    text-align: center;
+    .opening__h1 {
+        font-family: $font1;
+        font-size: 49px;
+        line-height: 57px;
+        font-weight: 400;
+        margin: 200px 0 20px 0;
+    }
+    .opening__text {
+        @include openingText;
+    }   
+    .opening__cta {
+        @include openingText;
+        color: $white;
+        display: inline-block;
+        margin-top: 60px;
+        padding: 22px 157px 23px 157px;
+        background-color: $primary;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 5px 10px 14px #07ACE629;
+        border-radius: 40px;
+    }
+    .opening__img {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+

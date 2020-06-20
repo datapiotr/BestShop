@@ -1,0 +1,111 @@
+.contact {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 60px;
+    .contact__text {
+        flex-basis: 50%;
+        margin-right: 10px;
+        h3 {
+            font-family: $font1;
+            font-size: 49px;
+            line-height: 57px;
+            margin-bottom: 22px;
+        }
+        p {
+            font-family: $font2;
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 42px;
+        }
+        .contact__text__icons {
+            display: flex;
+            p {
+                color: $grey;
+                font-weight: 600;
+            }
+            .mail {
+                display: flex;
+                margin-right: 30px;
+                &::before {
+                    @include mail-phone-before;
+                    background-image: url(../assets/MailIcon.svg);
+                }
+            }
+            .phone {
+                display: flex;
+                &::before {
+                    @include mail-phone-before;
+                    background-image: url(../assets/PhoneIcon.svg);
+                }
+            }
+        }
+    }
+    .contact__form {
+        flex-basis: 50%;
+        form {
+            display: flex;
+            flex-direction: column;
+            .contact__form__input {
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #95989A;
+                line-height: 35px;
+                margin-bottom: 42px;
+            }
+            p {
+                font-family: $font2;
+                font-size: 11px;
+                line-height: 15px;
+                color: $primary;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 3.28px;
+            }
+            .checkbox {
+                font-family: $font2;
+                font-size: 12px;
+                line-height: 17px;
+                color: #707070;
+                display: flex;
+                .checkbox__input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+                .checkbox__span {
+                    height: 24px;
+                    flex-shrink: 0;
+                    flex-basis: 24px;
+                    border: 1px solid #95989A;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    margin-right: 15px;
+                }
+            }
+            .send {
+                background-color: $primary;
+                font-size: 13px;
+                line-height: 18px;
+                font-weight: 700;
+                color: $white;
+                padding: 20px 97px 20px 97px;
+                box-shadow: 5px 10px 14px $primary-shadow;
+                border-radius: 35px;
+                border: none;
+                margin-top: 20px;
+                align-self: flex-end;
+            }
+        }
+    }
+}
+
+.checkbox__input:checked + .checkbox__span {
+    background-image: url(../assets/Checkmark.svg);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: center;
+}

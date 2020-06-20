@@ -1,0 +1,25 @@
+@mixin openingText {
+    font-family: $font2;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+@mixin yes-no {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin yes-no-before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+}
+
+@mixin mail-phone-before {
+    content: '';
+    width: 27px;
+    height: 27px;
+    margin-right: 10px;
+}

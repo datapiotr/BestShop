@@ -1,0 +1,153 @@
+.benefits {
+    background-color: $light-grey;
+    .benefits__container {
+        max-width: 1124px;
+        margin: 0 auto;
+        padding: 105px 0 105px 0;
+        .benefits__element {
+            background-color: $white;
+            height: 370px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #E8E9ED;
+            border-radius: 5px;
+            &:nth-of-type(3) {
+                padding-right: 0;
+                display: flex;
+                background-color: $light-grey;
+                border: none;
+                margin-top: 37px;
+                .benefits__element__text {
+                    p {
+                        &::after {
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(2) {
+                margin-top: 37px;
+                .benefits__element__img {
+                    padding-right: unset;
+                    padding-left: 70px;
+                }
+            }
+            .benefits__element__img {
+                width: 433px;
+                height: 100%;
+                position: relative;
+                padding-right: 70px;
+                padding-right: unset;
+                padding-left: 70px;
+                img {
+                    width: 100%;
+                    position: absolute;
+                    top: 55%;
+                    transform: translateY(-50%);
+                    z-index: 1;
+                }
+                .redishDiv {
+                    width: 155px;
+                    height: 155px;
+                    background-color: $redish;
+                    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+                    border-radius: 41px;
+                    position: absolute;
+                    top: 15%;
+                    right: 15%;
+                }
+                .primaryDiv {
+                    width: 330px;
+                    height: 330px;
+                    background-color: $primary;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 5%;
+                    left: 70px;
+                }
+                .greenDiv {
+                    position: relative;
+                    width: 100%;
+                    background-color: $green;
+                    display: flex;
+                    justify-content: center;
+                    border: 1px solid #E8E9ED;
+                    border-radius: 5px;
+                }
+            }.second img {
+                top: 52%;
+                width: 95%;
+            }
+            .first img {
+                left: -15%;
+            }
+            &:last-child {
+                .benefits__element__img {
+                    display: flex;
+                    flex-basis: 35%;
+                    padding-right: unset;
+                }
+                img {
+                    width: 65%;
+                }
+                .benefits__element__text {
+                    padding: 70px 35px 70px 35px;
+                    border: 1px solid #E8E9ED;
+                    border-radius: 5px;
+                    flex-basis: 58%;
+                    background-color: $white;
+                    height: 370px;
+                    box-sizing: border-box;
+                }
+            }
+            .benefits__element__text {
+                width: 416px;
+                padding: 70px 0 70px 35px;
+                p {
+                    position: relative;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 80%;
+                    }
+                }
+                .redishBorder {
+                    &::after {
+                        border-bottom: 3px solid $redish;
+                    }
+                }
+                .primaryBorder {
+                    &::after {
+                        border-bottom: 3px solid $primary;
+                    }
+                }
+                .greenBorder {
+                    &::after {
+                        border-bottom: 3px solid $green;
+                    }
+                }
+                h3 {
+                    font-family: $font1;
+                    font-size: 36px;
+                    line-height: 42px;
+                    padding-bottom: 30px;
+                }
+                p {
+                    font-family: $font2;
+                    font-size: 16px;
+                    line-height: 22px;
+                    padding-bottom: 50px;
+                }
+            }
+            &:nth-last-of-type(2) {
+                .benefits__element__text {
+                    order: 1;
+                    padding-right: 35px;
+                }
+            }
+        }
+    }
+}
