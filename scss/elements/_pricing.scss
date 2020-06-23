@@ -45,7 +45,9 @@
                 margin: 20px 0 20px 0;
             }
             .pricing__element__features {
-                margin-left: 20px;
+                @include mobile {
+                    margin-left: 20px;
+                }
                 p:last-of-type {
                     margin-bottom: 81px;
                     @include mobile {

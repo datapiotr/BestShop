@@ -920,8 +920,10 @@ textarea {
   line-height: 19px;
   margin: 20px 0 20px 0;
 }
-.pricing .pricing__box .pricing__element .pricing__element__features {
-  margin-left: 20px;
+@media (max-width: 800px) {
+  .pricing .pricing__box .pricing__element .pricing__element__features {
+    margin-left: 20px;
+  }
 }
 .pricing .pricing__box .pricing__element .pricing__element__features p:last-of-type {
   margin-bottom: 81px;
