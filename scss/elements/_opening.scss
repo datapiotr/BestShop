@@ -1,5 +1,9 @@
 .opening {
     text-align: center;
+    @include mobile {
+        overflow: hidden;
+        height: 100vh;
+    }
     .opening__h1 {
         font-family: $font1;
         font-size: 49px;
@@ -9,6 +13,9 @@
     }
     .opening__text {
         @include openingText;
+        @include mobile {
+            padding: 0 100px;
+        }
     }   
     .opening__cta {
         @include openingText;
@@ -21,9 +28,16 @@
         text-decoration: none;
         box-shadow: 5px 10px 14px #07ACE629;
         border-radius: 40px;
+        @include mobile {
+            padding: 22px 100px 23px 100px;
+        }
     }
     .opening__img {
         width: 100%;
+        @include mobile {
+            width: 200%;
+            transform: translateX(-25%);
+          }
     }
 }
 

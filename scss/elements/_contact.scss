@@ -4,6 +4,9 @@
     margin: 0 auto;
     justify-content: center;
     margin-bottom: 60px;
+    @include mobile {
+        flex-direction: column;
+    }
     .contact__text {
         flex-basis: 50%;
         margin-right: 10px;
@@ -32,6 +35,9 @@
                     @include mail-phone-before;
                     background-image: url(../assets/MailIcon.svg);
                 }
+                @include tablet {
+                    margin-bottom: 15px;
+                }
             }
             .phone {
                 display: flex;
@@ -39,6 +45,9 @@
                     @include mail-phone-before;
                     background-image: url(../assets/PhoneIcon.svg);
                 }
+            }
+            @include tablet {
+                flex-direction: column;
             }
         }
     }

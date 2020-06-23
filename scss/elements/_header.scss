@@ -9,6 +9,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 80px;
         .headerbox__nav {
             flex-basis: 40%;
             display: flex;
@@ -19,15 +20,78 @@
             font-weight: 600;
             text-transform: uppercase;
             color: $grey;
+            transition: 0.2s;
             p {
-                padding: 23px;
+                padding: 32px;
                 transition: .2s;
                 cursor: pointer;
                 border-bottom: 2px solid transparent;
+                white-space: nowrap;
                 &:hover {
                     color: $black;
                     border-bottom: 2px solid $primary;
                 }
+            }
+            @include mobile {
+                position: absolute;
+                left: 0;
+                top: 80px;
+                flex-direction: column;
+                background-color: white;
+                width: 100%;
+                padding-bottom: 20px;
+                display: none;
+
+                p {
+                    padding: 14px 20px;
+                }
+            }
+        }
+        .menu__btn {
+            display: none;
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            opacity: 0;
+
+            @include mobile {
+                &:checked {
+                  ~ .headerbox__nav {
+                    display: flex;
+                  }
+              
+                  ~ .menu__toggle {
+                    span {
+                      &:nth-child(1) {
+                        transform: rotate(45deg) translate(2px, 5px);
+                      }
+                      &:nth-child(2) {
+                        opacity: 0;
+                      }
+                      &:nth-child(3) {
+                        transform: rotate(-45deg) translate(2px, -5px);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+        .menu__toggle {
+            display: none;
+            span {
+                width: 20px;
+                height: 2px;
+                display: block;
+                margin-bottom: 3px;
+                background-color: $primary;
+                transition: .3s all ease-in-out;
+            
+                &:last-child {
+                  margin-bottom: 0;
+                }
+            }
+            @include mobile {
+                display: block;
             }
         }
         .headerbox__logo {
@@ -36,6 +100,7 @@
             line-height: 37px;
             font-weight: 300;
             color: $primary;
+            margin-left: 20px;
         }
     }
 }

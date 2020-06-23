@@ -12,26 +12,45 @@
         align-items: center;
         text-align: center;
         margin-bottom: 160px;
+        @include mobile {
+            flex-direction: column;
+        }
         .pricing__element {
             border-radius: 18px;
             border-width: 1px;
             border-style: solid;
             flex-basis: 22%;
             position: relative;
+            @include mobile {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                padding: 10px 50px 40px 50px;
+                margin-bottom: 50px;
+            }
             h4 {
                 font-family: $font1;
                 font-size: 20px;
                 line-height: 24px;
                 font-weight: bold;
                 margin: 34px 0 34px 0;
+                @include mobile {
+                    margin: 0;
+                }
             }
             p {
                 font-family: $font2;
                 font-size: 14px;
                 line-height: 19px;
                 margin: 20px 0 20px 0;
-                &:last-of-type {
+            }
+            .pricing__element__features {
+                margin-left: 20px;
+                p:last-of-type {
                     margin-bottom: 81px;
+                    @include mobile {
+                        margin-bottom: unset;
+                    }
                 }
             }
             .price {
@@ -47,6 +66,9 @@
                 font-weight: bold;
                 margin-bottom: 50px;
                 margin-top: 0;
+                @include mobile {
+                    margin-bottom: 0;
+                }
             }
             .begin {
                 height: 50px;
@@ -70,6 +92,10 @@
                     @include yes-no-before;
                     background-image: url(../assets/Ckechmark-1.svg);
                 }
+                white-space: nowrap;
+                @include mobile {
+                    justify-content: flex-start;
+                }
             }
             .no {
                 @include yes-no;
@@ -77,14 +103,24 @@
                     @include yes-no-before;
                     background-image: url(../assets/Close.svg);
                 }
+                white-space: nowrap;
+                @include mobile {
+                    justify-content: flex-start;
+                }
             }
         }
         .reddishElement {
             border-color: $redish;
             height: 460px;
+            @include mobile {
+                width: 70%;
+            }
             .price {
-                color: var(--redish);
+                color: $redish;
                 margin-bottom: 64px;
+                @include mobile {
+                    margin-bottom: 0;
+                }
             }
         }
         .primaryElement {
@@ -92,15 +128,29 @@
             height: 500px;
             flex-basis: 25%;
             box-shadow: 5px 10px 27px $primary-shadow;
+            @include mobile {
+                width: 80%;
+            }
             .price {
-                color: var(--primary);
+                color: $primary;
+            }
+            .pricing__element__features {
+                p {
+                    line-height: 27px;
+                    @include mobile {
+                        line-height: 19px;
+                    }
+                }
             }
         }
         .greenElement {
             border-color: $green;
             height: 460px;
+            @include mobile {
+                width: 70%;
+            }
             .price {
-                color: var(--green);
+                color: $green;
             }
         }
     }

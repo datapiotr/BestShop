@@ -23,3 +23,15 @@
     height: 27px;
     margin-right: 10px;
 }
+
+@mixin tablet {
+    @media (max-width: 1352px) {
+      @content;
+    }
+  }
+
+  @mixin mobile {
+    @media (max-width: 800px) {
+      @content;
+    }
+  }
